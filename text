@@ -1,0 +1,10 @@
+挑戰等級
+LV 1｜做其中一頁的 RWD 網頁頁面，畫面不可顯示 x 軸
+LV 2｜做兩頁 RWD 網頁頁面，畫面不可顯示 x 軸
+LV 3｜做所有 RWD 頁面，且 JS 動畫效果都做（漢堡選單、Swiper、Modal）
+x 軸備註
+還請不要在 body 或第一層 div 加上 overflow:hidden 來規避 x 軸問題
+
+
+作業範例程式碼：https://github.com/hexschool/2024-camp
+

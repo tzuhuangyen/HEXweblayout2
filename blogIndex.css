@@ -1,0 +1,245 @@
+.banner {
+  margin-top: 120px;
+  margin-bottom: 80px;
+}
+/* 在屏幕宽度小于等于768px时应用的样式 */
+@media (max-width: 768px) {
+  .banner {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.banner .container {
+  position: relative;
+}
+.banner-content {
+  width: 222px;
+}
+.banner h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #3b3b3b;
+  margin-bottom: 24px;
+}
+
+.banner h1::before {
+  content: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-left-lg.png?raw=true');
+  position: absolute;
+  left: -25%;
+  top: 10px;
+  transform: translateY(-50%);
+}
+.banner h1::after {
+  content: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-lg.png?raw=true');
+  position: absolute;
+
+  left: 80%;
+  top: 10px;
+  transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 24px; /* 在小屏幕下将字体大小调整为24px */
+    margin-bottom: 16px; /* 可以根据需要调整 */
+  }
+}
+
+/* 在屏幕宽度小于等于768px时应用的样式 */
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 24px; /* 将字体大小调整为24px */
+  }
+}
+
+.banner h2 {
+  font-weight: 400;
+  color: #919191;
+  font-size: 16px;
+}
+
+.category {
+  background-color: #fafafa;
+  padding: 80px;
+  position: relative; /* 设置相对定位 */
+}
+@media (max-width: 768px) {
+  .category {
+    margin-bottom: 40px;
+    padding: 20px 12px;
+    width: 70%;
+    overflow-x: auto; /* 添加溢出内容时显示滚动条 */
+  }
+}
+.category li {
+  margin-bottom: 32px;
+}
+
+.category a {
+  font-size: 20px;
+  color: #5b5b5b;
+}
+.category a {
+  position: relative; /* 设置相对定位 */
+  color: black; /* 设置链接颜色 */
+  text-decoration: none; /* 移除默认的下划线 */
+}
+
+.category a::after {
+  content: ''; /* 添加伪元素 */
+  position: absolute; /* 设置绝对定位 */
+  left: 0; /* 与文字左对齐 */
+  bottom: -5px; /* 使下划线与文字底部有 5px 的距离 */
+  width: 0; /* 初始下划线长度为 0 */
+  height: 1px; /* 下划线高度 */
+  background-color: black; /* 下划线颜色 */
+  transition: width 0.3s; /* 添加过渡效果 */
+}
+.category a:hover::after {
+  width: 100%; /* 悬停时下划线宽度为文字宽度 */
+}
+
+.content-category {
+  display: flex;
+  flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+  .content-category {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .category ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .category li {
+    padding: 0;
+    margin: 0;
+    margin-right: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .category a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll {
+    width: 120%; /* 设置比父容器更宽的宽度 */
+    overflow-x: auto; /* 水平溢出时显示滚动条 */
+    white-space: nowrap; /* 禁止列表项换行 */
+    height: 50px; /* 设置固定高度 */
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll li {
+    display: inline-block; /* 将列表项作为内联块元素显示 */
+    margin-right: 10px; /* 可以根据需要调整列表项之间的间距 */
+  }
+}
+
+.content {
+  margin-bottom: 80px;
+}
+.content .card {
+  flex-direction: row;
+  border: none;
+  margin-bottom: 64px;
+}
+.content img {
+  height: 220px;
+  border-radius: 8px;
+  border: 1px solid #f1f1f1;
+}
+@media (max-width: 768px) {
+  .content img {
+    width: 306px;
+  }
+}
+.content .card-body {
+  margin-left: 16px;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .content .card-body {
+    width: 306px;
+    margin: 0;
+  }
+}
+.content .subTitle {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  margin-bottom: 16px;
+  align-items: center;
+}
+.subTitle .tag {
+  background-color: #f1f1f1;
+  border-radius: 16px;
+  padding: 4px 12px;
+}
+@media (max-width: 768px) {
+  .subTitle {
+    padding-top: 16px;
+  }
+}
+.content .card-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.content .card-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #3b3b3b;
+}
+.content .card-text::after {
+  content: '...';
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .content .card-text {
+    line-height: 24px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 显示的段落数 */
+    -webkit-box-orient: vertical;
+    line-clamp: 3; /* 新标准 */
+  }
+  .content .card-text::after {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-card {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content-card .card {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 306px; /* 限制卡片最大宽度为 306px */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 使卡片内容居中 */
+  }
+  .content-card .card img {
+    width: 306px; /* 确保图片占满卡片宽度*/
+    object-fit: cover; /* 确保图片在容器内完整覆盖 */
+    height: auto; /* 保持图片的宽高比 */
+  }
+}
